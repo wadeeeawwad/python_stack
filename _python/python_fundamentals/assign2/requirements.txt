@@ -1,0 +1,75 @@
+Django==2.2.4
+pytz==2021.1
+sqlparse==0.4.1
+
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ li
+bash: li: command not found
+
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ ls
+ 120966034_3484079348302023_5095679395868390603_n.jpg   Zoom.lnk*
+ 32419972_2047906032202876_9078289836892225536_n.jpg   'coding dojo'/
+ 89761179_2921358461240784_393022445688193024_n.jpg     desktop.ini
+'MySQL Workbench 8.0 CE.lnk'*                           exaaaam.png
+'New Microsoft Word Document.docx'                      images.rar
+'New Text Document.txt'                                 my.cnf.rtf
+ Programing/                                            ninja-cat.zip
+ Tools/                                                 py3Env/
+'Visual Studio Code.lnk'*                               python_stack/
+'Web fundamentals'/                                     wadee_awwad/
+'Where are my files.lnk'*                               wpython/
+ Word.lnk*
+
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ source wpython/scrips/activate
+bash: wpython/scrips/activate: No such file or directory
+
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ source wpython/scripts/activate
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip list
+Package    Version
+---------- -------
+pip        21.1.1
+setuptools 56.0.0
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip install django==2.2.4
+Collecting django==2.2.4
+  Downloading Django-2.2.4-py3-none-any.whl (7.5 MB)
+Collecting sqlparse
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+Collecting pytz
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+Installing collected packages: sqlparse, pytz, django
+Successfully installed django-2.2.4 pytz-2021.1 sqlparse-0.4.1
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip freeze
+Django==2.2.4
+pytz==2021.1
+sqlparse==0.4.1
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip freeze > requirements.txt
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip unistall django
+ERROR: unknown command "unistall" - maybe you meant "uninstall"
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
+$ pip show django
+Name: Django
+Version: 2.2.4
+Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Home-page: https://www.djangoproject.com/
+Author: Django Software Foundation
+Author-email: foundation@djangoproject.com
+License: BSD
+Location: c:\users\dell\desktop\wpython\lib\site-packages
+Requires: pytz, sqlparse
+Required-by:
+(wpython)
+DELL@DESKTOP-2MNL9GR MINGW64 ~/Desktop
