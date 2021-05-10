@@ -1,0 +1,36 @@
+Microsoft Windows [Version 10.0.19042.928]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DELL\Desktop\python_stack\flask>C:\Users\DELL\Desktop\python_stack\flask
+'C:\Users\DELL\Desktop\python_stack\flask' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\DELL\Desktop\python_stack\flask>cd C:\Users\DELL\Desktop\python_stack\flask
+
+C:\Users\DELL\Desktop\python_stack\flask>cd "flask fundamentals"
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals>dir
+ Volume in drive C has no label.
+ Volume Serial Number is B8D7-E8A8
+
+ Directory of C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals
+
+05/10/2021  01:18 AM    <DIR>          .
+05/10/2021  01:18 AM    <DIR>          ..
+05/10/2021  01:23 PM    <DIR>          hello_flask
+               0 File(s)              0 bytes
+               3 Dir(s)  201,219,629,056 bytes free
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals>mkdir assign2
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals>cd assign2
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals\assign2>touch assign2.py
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals\assign2>code .
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals\assign2>python assign2.py
+
+C:\Users\DELL\Desktop\python_stack\flask\flask fundamentals\assign2>
