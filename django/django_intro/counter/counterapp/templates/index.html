@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>counter</h1>
+    <h3> {{request.session.counter}}</h3>
+    <h1>x</h1>
+    <h2>  
+        {{numx}}
+    </h2>
+    <form action="/destroy" method="POST">
+        {% csrf_token %}
+    <button type="submit">destroy </button>
+    
+    </form>
+    <form action="/add2" method="POST">
+        {% csrf_token %}
+    <button type="submit">add2 </button>
+    
+    </form>
+</form>
+<form action="/addx" method="POST">
+    {% csrf_token %}
+    
+<input name="x" type="text">
+<button type="submit">addx </button>
+
+</form>
+</body>
+</html>
