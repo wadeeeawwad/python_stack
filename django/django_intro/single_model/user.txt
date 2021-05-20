@@ -1,0 +1,29 @@
+Microsoft Windows [Version 10.0.19042.985]
+(c) Microsoft Corporation. All rights reserved.
+
+
+
+
+C:\Users\DELL\Desktop\python_stack\django\django_intro>cd ..
+
+C:\Users\DELL\Desktop\python_stack\django>cd ..
+
+C:\Users\DELL\Desktop\python_stack>call my_environments\djangoPy3Env\Scripts\activate
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack>cd django
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack\django>cd django_intro
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack\django\django_intro>django-admin startproject single_model
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack\django\django_intro>python manage.py startapp user_app
+C:\Users\DELL\AppData\Local\Programs\Python\Python39\python.exe: can't open file 'C:\Users\DELL\Desktop\python_stack\django\django_intro\manage.py': [Errno 2] No such file or directory
+
+
+
+
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack\django\django_intro\single_model>python manage.py migrate
+
+
+(djangoPy3Env) C:\Users\DELL\Desktop\python_stack\django\django_intro\single_model>
