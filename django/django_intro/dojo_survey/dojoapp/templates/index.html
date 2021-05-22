@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dojo servey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>wadee3</h1>
+   
+    <table >
+        <form action="result" method="POST">
+            {% csrf_token %}
+            
+                <tr>
+                    <td><label for="name:">your name:</label>
+                         <input type="text" name="name">
+                    </td>
+        
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td><label for="location:">dojo location:</label>
+                         <input type="text" name="location">
+                    </td>
+        
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <td>
+                        <label for="language:">favorit language:</label>
+                    <input type="text" name="language">
+                    </td>
+        
+                </tr>
+                <br><br>
+                
+                <tr>
+                    <td>
+                        <label for="coment:" >coment opptional:</label><br>
+                    <textarea name="comment" id="" cols="30" rows="10" ></textarea> 
+                    </td>
+
+                </tr>
+                <br>
+
+                <tr><td><button type="submit">button</button></td>
+                    </tr>
+        
+    
+        </form>
+        
+    </table>
+   
+</body>
+</html>
