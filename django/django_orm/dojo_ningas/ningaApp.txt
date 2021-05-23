@@ -1,0 +1,131 @@
+ from ninja_app.models import dojos
+>>> from ninja_app.models import ninjas
+
+
+>>> from ninja_app.models import dojos
+>>> from ninja_app.models import ninjas
+>>> dojos.objects.create(name='Wadee', city='Nablus', state='Palestine')
+<dojos: dojos object (1)>
+>>> dojos.objects.create(name='ibrahim',city='ramallah',state='palestine')
+<dojos: dojos object (2)>
+>>> dojos.objects.create(name='ghazal',city='ddddh',state='palestine')
+<dojos: dojos object (3)>
+
+
+
+
+>>> c=dojos.objects.get(id=1)
+>>> c.delete()
+(1, {'ninja_app.dojos': 1})
+>>> dojos.objects.all()
+<QuerySet [<dojos: dojos object (2)>, <dojos: dojos object (3)>]>
+>>> c=dojos.objects.get(id=2)
+>>> c.delete()
+(1, {'ninja_app.dojos': 1})
+>>> dojos.objects.all()
+<QuerySet [<dojos: dojos object (3)>]>
+>>> c=dojos.objects.get(id=3)
+>>> c.delete()
+(1, {'ninja_app.dojos': 1})
+>>>
+
+
+>>> dojos.objects.create(name='Wadee', city='Nablus', state='Palestine')
+<dojos: dojos object (4)>
+>>> dojos.objects.create(name='ibrahim',city='ramallah',state='palestine')
+<dojos: dojos object (5)>
+>>> dojos.objects.create(name='ghazal',city='ddddh',state='palestine')
+<dojos: dojos object (6)>
+>>>
+
+
+>>> ninja1 = ninjas.objects.create(first_name="laith",last_name="awwad", dojo=dojos.objects.get(id=4)
+... ninja2 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+  File "<console>", line 2
+    ninja2 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+    ^
+SyntaxError: invalid syntax
+>>> ninja2 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+... ninja3 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="lana",last_name="awwad", dojo=dojos.objects.get(id=4)
+... ninja3 = ninjas.objects.create(first_name="batatta",last_name="awd", dojo=dojos.objects.get(id=5)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="batatta",last_name="awd", dojo=dojos.objects.get(id=5)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="batatta",last_name="awd", dojo=dojos.objects.get(id=5)
+... ninja3 = ninjas.objects.create(first_name="batata",last_name="wd", dojo=dojos.objects.get(id=5)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="batata",last_name="wd", dojo=dojos.objects.get(id=5)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="batata",last_name="wd", dojo=dojos.objects.get(id=5)
+... ninja3 = ninjas.objects.create(first_name="bata",last_name="d", dojo=dojos.objects.get(id=5)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="bata",last_name="d", dojo=dojos.objects.get(id=5)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="bata",last_name="d", dojo=dojos.objects.get(id=5)
+... ninja3 = ninjas.objects.create(first_name="baba",last_name="hurd", dojo=dojos.objects.get(id=6)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="baba",last_name="hurd", dojo=dojos.objects.get(id=6)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="baba",last_name="hurd", dojo=dojos.objects.get(id=6)
+... ninja3 = ninjas.objects.create(first_name="barr",last_name="hrd", dojo=dojos.objects.get(id=6)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="barr",last_name="hrd", dojo=dojos.objects.get(id=6)
+    ^
+SyntaxError: invalid syntax
+>>> ninja3 = ninjas.objects.create(first_name="barr",last_name="hrd", dojo=dojos.objects.get(id=6)
+... ninja3 = ninjas.objects.create(first_name="baorr",last_name="hrod", dojo=dojos.objects.get(id=6)
+  File "<console>", line 2
+    ninja3 = ninjas.objects.create(first_name="baorr",last_name="hrod", dojo=dojos.objects.get(id=6)
+    ^
+
+>>> ninja3 = ninjas.objects.create(first_name="baorr",last_name="hrod", dojo=dojos.objects.get(id=6)
+... ninja = ninjas.objects.filter(dojo=dojos.objects.get(id=4))
+  File "<console>", line 2
+
+
+>>> ninjas.objects.create(first_name='shadi',last_name='abd',dojo=dojos.objects.get(id=4))
+<ninjas: ninjas object (1)>
+>>> ninjas.objects.create(first_name='shadi',last_name='abd',dojo=dojos.objects.get(id=4))
+<ninjas: ninjas object (2)>
+>>> ninjas.objects.create(first_name='shadi',last_name='abd',dojo=dojos.objects.get(id=4))
+<ninjas: ninjas object (3)>
+>>>
+
+
+
+>>> ninjas.objects.create(first_name='fadi',last_name='abd',dojo=dojos.objects.get(id=5))
+<ninjas: ninjas object (4)>
+>>> ninjas.objects.create(first_name='fadi',last_name='abd',dojo=dojos.objects.get(id=5))
+<ninjas: ninjas object (5)>
+>>> ninjas.objects.create(first_name='fadi',last_name='abd',dojo=dojos.objects.get(id=5))
+<ninjas: ninjas object (6)>
+>>>
+
+
+>>> dojos.objects.get(id=4).ninjas
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x0000020E65AECFA0>
+
+ dojos.objects.last().ninjas
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x0000020E65AECFA0>
+
+
+dojos.objects.get(id=6).ninjas.last()
+<ninjas: ninjas object (9)>
+
+
+desc = models.TextField()
+
+python manage.py makemigrations ninja_app
+python manage.py migrate
+
+
+
