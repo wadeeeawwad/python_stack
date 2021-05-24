@@ -1,0 +1,94 @@
+create 5 books 
+Book.objects.create(title='C Sharp',desc='Programming book')
+Book.objects.create(title='Python',desc='Programming book')
+Book.objects.create(title='Java',desc='Programming book')
+Book.objects.create(title='PHP',desc='Programming book')
+Book.objects.create(title='Ruby',desc='Programming book')
+create 5 authors 
+authors.objects.create(first_name='Jane',last_name='Austen')
+authors.objects.create(first_name='Emily',last_name='Dickinson')
+authors.objects.create(first_name='Fyodor',last_name='Dostoevsky')
+authors.objects.create(first_name='William',last_name='Shakespeare')
+authors.objects.create(first_name='Lau',last_name='Tzu')
+
+create a new field in authors
+notes = models.TextField(default=200)
+
+Change the name of the C Sharp book to C#
+
+c=Book.objects.get(id=1)
+>>> c.title="C#"
+>>> c.save()
+
+
+change 4th author to Bill
+c=authors.objects.get(id=4)
+>>> c.first_name="Bill"
+>>> c.save()
+
+assign the first author to the first and second book
+c=authors.objects.get(id=1)
+>>> x=Books.objects.get(id=1)
+x.authors.add(c)
+c=authors.objects.get(id=1)
+>>> x=Books.objects.get(id=2)
+x.authors.add(c)
+assign 2nd author to the first 3 book 
+c=authors.objects.get(id=2)
+>>> x=Book.objects.get(id=1)
+>>> x.authors.add(c)
+c=authors.objects.get(id=2)
+>>> x=Book.objects.get(id=2)
+>>> x.authors.add(c)
+ c=authors.objects.get(id=2)
+>>> x=Book.objects.get(id=3)
+>>> x.authors.add(c)
+assign 3rd author to the 4 first book 
+ c=authors.objects.get(id=3)
+>>> x=Book.objects.get(id=1)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=3)
+>>> x=Book.objects.get(id=2)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=3)
+>>> x=Book.objects.get(id=3)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=3)
+>>> x=Book.objects.get(id=4)
+>>> x.authors.add(c)
+
+assign 4th author to all books 
+c=authors.objects.get(id=4)
+ x=Book.objects.get(id=1)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=4)
+>>> x=Book.objects.get(id=2)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=4)
+>>> x=Book.objects.get(id=3)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=4)
+>>> x=Book.objects.get(id=4)
+>>> x.authors.add(c)
+>>> c=authors.objects.get(id=4)
+>>> x=Book.objects.get(id=5)
+>>> x.authors.add(c)
+
+get all authors of 3rd book 
+x=Book.objects.get(id=3)
+>>> x.authors.all()
+<QuerySet [<authors: authors object (2)>, <authors: authors object (3)>, <authors: authors object (4)>]> 
+
+remove first author of book 3 
+x=Book.objects.get(id=3)
+>>> c=authors.objects.get(id=2)
+>>> x.authors.remove(c)
+all books by author id =3
+c=authors.objects.get(id=3)
+>>> c.books.all()
+<QuerySet [<Book: Book object (1)>, <Book: Book object (2)>, <Book: Book object (3)>, <Book: Book object (4)>]>
+
+the authors of book id =5 
+c=Book.objects.get(id=5)
+>>> c.authors.all()
+<QuerySet [<authors: authors object (4)>]>
