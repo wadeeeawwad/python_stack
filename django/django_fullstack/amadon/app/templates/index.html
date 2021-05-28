@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+table {
+        width: 50%;
+        border: 1px solid #000;
+      }
+      
+      th, td {
+        width: 25%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid #000;
+        border-spacing: 0;
+      }
+    </style>
+
+
+
+</head>
+<body>
+    <h1>amadon store!</h1>
+    
+   <table>
+       <head>
+           <th>Item</th>
+           <th>Price</th>
+           <th>Quantity</th>
+           <th>Actions</th>
+       </head>
+       <body>
+            {%for i in products%}
+            <tr>
+                <form action="checkout" method="POST">
+                    {% csrf_token %}
+                    <td>{{i.descrption</td>
+                    <td><input type="hidden" name="price" value="{{i.price}}">{{i.price}} </td>
+                    <td><select name="quantity" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select></td>
+                    <td><input type="submit" value="buy!"></td>
+                
+                </form>
+                </tr>
+            {% endfor %}
+
+            
+       </body>
+
+
+
+
+
+   </table>
+
+</body>
+</html>
