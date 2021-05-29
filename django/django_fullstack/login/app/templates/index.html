@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="left">
+                <form action="/registration" method="POST">
+                    {% csrf_token %}
+                        <h1> 💝 Registration 😀 </h1>
+                        <div class="le"></div>
+                        first name: <input type="text" name="fname" required><br><br>
+                        last name :<input type="text" name="lname"required><br><br>
+                        email: <input type="text" name="email" required><br><br>
+                        password  :  <input type="password" name="password"required><br><br>
+                        confirm pw: <input type="password" name="confirm_pw"required><br><br>
+                        <input type="submit" value="registr">
+
+            
+                </form>
+    </div>
+    <br> <br> <br>
+
+
+    <div id="right">
+
+
+    
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    email: <input type="text" name="lemail" required><br><br>
+
+
+
+                    password  :  <input type="password" name="lpassword"required><br><br>
+                    <input type="submit" value="log in">
+                
+                </form>
+    </div>
+
+
+    
+</body>
+</html>

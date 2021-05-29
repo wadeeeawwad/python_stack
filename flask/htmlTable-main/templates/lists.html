@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!--bootstrap list group-->
+    <div id="table">
+
+        <ul class="column">
+            <li class="list-group-item list-group-item-success">First Name</li>
+            {% for name in users %}
+            <li class="list-group-item">{{ name['first_name'] }}</li>
+            {% endfor %}
+        </ul>
+
+        <ul class="column">
+            <li class="list-group-item list-group-item-success">Last Name</li>
+            {% for name in users %}
+            <li class="list-group-item">{{ name['last_name'] }}</li>
+            {% endfor %}
+        </ul>
+
+        <ul class="column">
+            <li class="list-group-item list-group-item-success">Full Name</li>
+            {% for name in users %}
+            <li class="list-group-item">{{ name['first_name'] + ' ' + name['last_name']}}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+    
+</body>
+
+</html>

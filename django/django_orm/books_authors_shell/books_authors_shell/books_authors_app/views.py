@@ -30,3 +30,22 @@ def addauthor(req,id):
     author = Authours.objects.get(id=req.POST['showauthor'])
     author.books.add(book)
     return  redirect("/")
+    
+def indexx(req):
+   
+    return render(req,"show.html")
+
+def addshow(reques):
+    title = req.POST['title']
+
+    desc = req.POST['desc']
+    releasedate = req.POST['releasedate']
+    network = req.POST['network']
+
+    Books.objects.create(title = title , desc = desc)
+    return redirect("/")
+
+
+
+
+    return redirect('/')

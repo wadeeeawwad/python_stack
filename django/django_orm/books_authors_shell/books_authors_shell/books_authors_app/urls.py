@@ -4,5 +4,7 @@ urlpatterns = [
     path('', views.index),
     path('addbook',views.addbook),
     path('books/<int:id>',views.view),
-    path('books/<int:id>/addauthortobook', views.addauthor)
+    path('books/<int:id>/addauthortobook', views.addauthor),
+    path('show', views.indexx),
+    path('addshow', views.addshow),
 ]
