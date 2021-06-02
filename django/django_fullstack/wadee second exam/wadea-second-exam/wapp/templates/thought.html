@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THoughts</title>
+</head>
+<body>
+       
+            <h1>hi {{request.session.username}} !</h1>
+            <a href="/logout"  style="float: right; color rgb(7, 29, 235) ">Log out</a>
+      
+    
+       
+           
+                <form action="/addpost" method="POST">
+                    {% csrf_token %}
+                    <input type="text" style="width: 350px;"  name="post"  placeholder="post a great thought here" required>
+                    <input type="submit" value="Add Thought!">
+
+                </form>
+                <p>_______________________________________________________________________________________________________</p>
+               
+                {% for i in allposts %}
+                <p>{{i.users.first_name}} says:</p>
+              
+                <textarea name="" id="" cols="30" rows="10" style="width: 350px;height: 60px;"> {{i.post}}</textarea>
+                   
+                
+                {% if i.users.id == request.session.id %}
+                <form action="/delete/{{i.id}}" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Delete" style="background-color: red; margin-left: 150px;">
+                </form>
+                {% endif %}
+                <a href="/thoughts/{{i.id}}">Details</a>
+                <p style="margin-left: 70px;">#of likes </p> 
+                {% endfor %}
+          
+        
+</body>
+</html>

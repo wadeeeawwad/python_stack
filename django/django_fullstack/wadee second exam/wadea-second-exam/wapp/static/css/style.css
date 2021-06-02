@@ -1,0 +1,36 @@
+*{
+    padding: 5px;
+    margin: 5px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+  align-content:center;
+    
+}
+.registration{
+   display: flex;justify-content: space-around ;vertical-align: top;
+  
+    border: 2px solid black;
+} 
+.login{
+   
+    border: 1px solid black;
+   
+} 
+a{
+    color: rgb(19, 18, 18);
+    font-weight: bold;
+}
+
+
+.delete{
+    width: 30px;
+    height: 20px;
+    background-color: red;
+
+
+
+}
+
+

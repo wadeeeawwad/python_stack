@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>details</title>thoughts
+
+    
+    <style type="text/css">
+           
+
+     td {
+          border: 1px solid #979393;
+          text-align: left;
+         padding: 8px;
+        }
+        th {
+            border: 1px solid #41535e;
+            text-align: left;
+            padding: 8px;
+            }
+
+                
+    </style>
+</head>
+<body>
+        
+            <a href="/logout" style="margin-right: 50px;float: right;" >Logout</a>
+
+            <a href="/thoughts" style="float: right;margin-right: 10px;" >Dashboard</a>
+      
+                    <p>{{ this_post.users.first_name}} says:</p>
+                    <textarea name="" id="" cols="30" rows="10" style="height: 60px;width: 400px;">{{this_post.post}}</textarea>
+                
+              
+                    {% if test %}
+                    <form action="/unlike/{{this_post.id}}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Unlike">
+                    </form>
+                    {% else %}
+                    
+                    <form action="/like/{{this_post.id}}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Like">
+                    </form>
+                    {% endif %}
+               
+                
+            <h3>People who liked this thought :</h3>
+                
+            <table style="width: 300px ;font-family: arial, sans-serif;
+             border-collapse: collapse;">
+                 <tr>
+                    <th>First name</th>
+                     <th>Last name</th>
+                 </tr>
+                    {% for i in this_post.liked_by.all %}
+                <tr>
+                     <td>{{i.first_name}}</td>
+                    <td>{{i.last_name}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+                            
+            
+    
+</body>
+</html>
